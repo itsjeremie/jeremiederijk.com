@@ -1,0 +1,99 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #f0ebe0;
+  color: #1e1b14;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 2.5rem;
+  border-bottom: 1px solid #d8d2c4;
+  max-width: 100%;
+}
+.nav-home {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7a7060;
+  transition: color 0.2s;
+}
+.nav-home:hover { color: #1e1b14; }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a9080;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: #1e1b14; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding: 4rem 0 3rem;
+}
+.page-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* ── WRITING LIST ── */
+.writing-list {
+  list-style: none;
+  border-top: 1px solid #d8d2c4;
+  padding-bottom: 6rem;
+}
+.writing-list li {
+  border-bottom: 1px solid #d8d2c4;
+}
+.writing-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.1rem 0;
+  transition: color 0.2s;
+}
+.writing-list a:hover .title { color: #5a7a30; }
+.title {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.date {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: #9a9080;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .container { padding: 0 1.5rem; }
+  .writing-list a { flex-direction: column; gap: 0.2rem; }
+}
